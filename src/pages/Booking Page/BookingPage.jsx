@@ -35,21 +35,21 @@ const BookingPage = () => {
 					onClick={() => HandleClickSeat(`${row} A`)}
 					id="A"
 				>
-					<h2>{`${row} A`}</h2>
+					<h3>{`${row} A`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} B`)}
 					id="B"
 				>
-					<h2>{`${row} B`}</h2>
+					<h3>{`${row} B`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} C`)}
 					id="C"
 				>
-					<h2>{`${row} C`}</h2>
+					<h3>{`${row} C`}</h3>
 				</div>
 			</div>
 			<div className="Middle-seat">
@@ -58,28 +58,28 @@ const BookingPage = () => {
 					onClick={() => HandleClickSeat(`${row} D`)}
 					id="D"
 				>
-					<h2>{`${row} D`}</h2>
+					<h3>{`${row} D`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} E`)}
 					id="E"
 				>
-					<h2>{`${row} E`}</h2>
+					<h3>{`${row} E`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} F`)}
 					id="F"
 				>
-					<h2>{`${row} F`}</h2>
+					<h3>{`${row} F`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} G`)}
 					id="G"
 				>
-					<h2>{`${row} G`}</h2>
+					<h3>{`${row} G`}</h3>
 				</div>
 			</div>
 			<div className="Right-seat">
@@ -88,21 +88,21 @@ const BookingPage = () => {
 					onClick={() => HandleClickSeat(`${row} H`)}
 					id="H"
 				>
-					<h2>{`${row} H`}</h2>
+					<h3>{`${row} H`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} I`)}
 					id="I"
 				>
-					<h2>{`${row} I`}</h2>
+					<h3>{`${row} I`}</h3>
 				</div>
 				<div
 					className="Plane-seat"
 					onClick={() => HandleClickSeat(`${row} J`)}
 					id="J"
 				>
-					<h2>{`${row} J`}</h2>
+					<h3>{`${row} J`}</h3>
 				</div>
 			</div>
 		</div>
@@ -117,9 +117,11 @@ const BookingPage = () => {
 			{showBookReview && (
 				<div className="Booking-review">
 					<h2>Booking Review</h2>
-					{choosenSeat.map((element) => (
-						<h3>{element}</h3>
-					))}
+					<div classname="Seat-review">
+						{choosenSeat.map((element) => (
+							<h3>{element}</h3>
+						))}
+					</div>
 				</div>
 			)}
 		</div>

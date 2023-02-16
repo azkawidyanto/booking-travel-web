@@ -1,11 +1,11 @@
 .Booking {
-	background-color: ;
 	height: auto;
 }
 .Plane-seat {
 	width: 4vw;
-	height: 4vh;
-	text-align: center;
+	height: 5vh;
+	display: flex;
+	justify-content: center;
 	background-color: white;
 	border: 5px solid black;
 	margin-bottom: 1vw;
@@ -21,25 +21,28 @@
 .Right-seat {
 	display: flex;
 }
-h2 {
-	font-size: 10px;
-}
+
 h3 {
-	font-size: 8px;
 	margin-right: 1vw;
-	display: flex;
+}
+.Seat-review {
+	display: flex !important;
 	flex-direction: row;
+	align-items: baseline;
 }
 .Plane-rows {
 	width: 60vw;
 	height: 4vw;
-	display: flex;
+	display: inline-flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 .Booking-plane-seats {
 	width: 100vw;
 	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background-color: aquamarine;
 	border: 5px solid black;
 	overflow-y: scroll;
@@ -48,7 +51,9 @@ h3 {
 .Booking-review {
 	width: 100vw;
 	padding: 5vw;
-
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	border: 5px solid black;
 	background-color: aqua;
 }
