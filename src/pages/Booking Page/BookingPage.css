@@ -2,24 +2,13 @@
 	height: auto;
 }
 .Plane-seat {
-	width: 4vw;
-	height: 5vh;
-	display: flex;
+	width: 7vw;
+	height: 5vw;
 	justify-content: center;
+	text-align: center;
 	background-color: white;
 	border: 5px solid black;
 	margin-bottom: 1vw;
-}
-.Left-seat {
-	display: flex;
-	margin-right: 1vw;
-}
-.Middle-seat {
-	display: flex;
-	margin-right: 1vw;
-}
-.Right-seat {
-	display: flex;
 }
 
 h3 {
@@ -31,18 +20,21 @@ h3 {
 	align-items: baseline;
 }
 .Plane-rows {
-	width: 60vw;
+	width: 9vw;
 	height: 4vw;
-	display: inline-flex;
+	margin-right: 0.5vw;
+	margin-bottom: 1vw;
 	flex-direction: row;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 .Booking-plane-seats {
 	width: 100vw;
 	height: 80vh;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
 	background-color: aquamarine;
 	border: 5px solid black;
 	overflow-y: scroll;
