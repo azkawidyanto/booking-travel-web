@@ -20,7 +20,7 @@ const BookingPage = () => {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const seatsData = useMemo(() => getSeats().then(), []);
 
-	seatsData.then((element) => element);
+	seatsData.then((element) => console.log(element));
 
 	const HandleClickSeat = (seatData) => {
 		setChoosenSeat(seatData);
