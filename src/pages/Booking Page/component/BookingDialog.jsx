@@ -1,6 +1,4 @@
 const BookingDialog = (props) => {
-	console.log(props?.choosenSeat);
-
 	return (
 		<div className="Booking-review" style={{ backgroundColor: "white" }}>
 			<h2>Booking Review</h2>

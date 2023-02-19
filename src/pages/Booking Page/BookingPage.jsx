@@ -20,6 +20,8 @@ const BookingPage = () => {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const seatsData = useMemo(() => getSeats().then(), []);
 
+	seatsData.then((element) => element);
+
 	const HandleClickSeat = (seatData) => {
 		setChoosenSeat(seatData);
 	};
@@ -35,7 +37,7 @@ const BookingPage = () => {
 			.from("seats")
 			.update({ occupied: true })
 			.eq("seat_number", data?.seat_number);
-		seatsData.then((element) => console.log(element));
+		seatsData.then((element) => element);
 	};
 
 	useEffect(() => {
@@ -48,7 +50,7 @@ const BookingPage = () => {
 				setShowBookDialog(true);
 			}
 		}
-	}, [choosenSeat]);
+	}, [choosenSeat, seatsData]);
 	const planeSeat = (data) => (
 		<div className="Plane-rows">
 			<div

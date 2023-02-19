@@ -1,5 +1,4 @@
 const InfoDialog = (props) => {
-	console.log(props?.choosenSeat);
 	return (
 		<div className="Booking-review" style={{ backgroundColor: "white" }}>
 			<h2>Info Seat Review</h2>
