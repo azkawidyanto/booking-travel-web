@@ -10,7 +10,12 @@ const InfoDialog = (props) => {
 					<h3>{props.choosenSeat.price}</h3>
 				</div>
 			</div>
-			<button onClick={props.handleClose}>Close</button>
+			<button
+				style={{ height: "2vw", width: "3vw" }}
+				onClick={props.handleClose}
+			>
+				Close
+			</button>
 		</div>
 	);
 };

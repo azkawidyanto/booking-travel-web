@@ -20,8 +20,6 @@ const BookingPage = () => {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const seatsData = useMemo(() => getSeats().then(), []);
 
-	seatsData.then((element) => console.log(element));
-
 	const HandleClickSeat = (seatData) => {
 		setChoosenSeat(seatData);
 	};
@@ -30,6 +28,14 @@ const BookingPage = () => {
 		if (data?.occupied === true) {
 			return { backgroundColor: "#FF5733" };
 		}
+	};
+
+	const handleBooking = async (data) => {
+		await supabase
+			.from("seats")
+			.update({ occupied: true })
+			.eq("seat_number", data?.seat_number);
+		seatsData.then((element) => console.log(element));
 	};
 
 	useEffect(() => {
@@ -60,7 +66,6 @@ const BookingPage = () => {
 		setShowInfoDialog(false);
 		setShowBookDialog(false);
 	};
-	console.log(choosenSeat, showBookDialog, showInfoDialog);
 	return (
 		<div className="Booking">
 			<h1>Booking Seat Number</h1>
@@ -68,7 +73,11 @@ const BookingPage = () => {
 				{seatsState?.data.map((element) => planeSeat(element))}
 			</div>
 			{showBookDialog && (
-				<BookingDialog choosenSeat={choosenSeat} handleClose={handleClose} />
+				<BookingDialog
+					choosenSeat={choosenSeat}
+					handleBooking={handleBooking}
+					handleClose={handleClose}
+				/>
 			)}
 			{showInfoDialog && (
 				<InfoDialog choosenSeat={choosenSeat} handleClose={handleClose} />
