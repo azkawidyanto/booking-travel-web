@@ -64,7 +64,7 @@ const BookingPage = () => {
 		</div>
 	);
 	const handleClose = () => {
-		window.history.back();
+		window.close();
 		setShowInfoDialog(false);
 		setShowBookDialog(false);
 	};
