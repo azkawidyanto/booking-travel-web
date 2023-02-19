@@ -70,7 +70,7 @@ const BookingPage = () => {
 		<div className="Booking">
 			<h1>Booking Seat Number</h1>
 			<div className="Booking-plane-seats">
-				{seatsState?.data.map((element) => planeSeat(element))}
+				{seatsState?.data?.map((element) => planeSeat(element))}
 			</div>
 			{showBookDialog && (
 				<BookingDialog
